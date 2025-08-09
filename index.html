@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toca da Aventura</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            min-height: 100vh;
-            background: url('fundo1a.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
-        h1 {
-            font-size: 3em;
-        }
-        footer {
-            position: fixed;
-            bottom: 20px;
-            text-align: center;
-            width: 100%;
-        }
-        .contatos a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
-            background: rgba(0,0,0,0.4);
-            padding: 8px 12px;
-            border-radius: 8px;
-        }
-        .contatos a:hover {
-            background: rgba(255,255,255,0.3);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toca da Aventura</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100dvh; /* altura dinâmica p/ mobile */
+        background-image: url('fundo1a.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll; /* evita glitch no iOS */
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, sans-serif;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    @supports not (height: 100dvh) {
+        body { min-height: 100vh; }
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contatos a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2em;
+        background: rgba(0,0,0,0.4);
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+
+    .contatos a:hover {
+        background: rgba(255,255,255,0.3);
+    }
+</style>
 </head>
 <body>
     <h1>Em Construção</h1>
@@ -56,4 +76,3 @@
     </footer>
 </body>
 </html>
-
