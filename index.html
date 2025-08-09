@@ -8,45 +8,34 @@
     html, body {
         margin: 0;
         padding: 0;
+        height: 100%;
     }
 
     body {
-        min-height: 100dvh; /* altura dinâmica p/ mobile */
-        background-image: url('fundo1a.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: scroll; /* evita glitch no iOS */
-        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         font-family: Arial, sans-serif;
+        background-color: #000; /* fundo liso */
         color: white;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        text-align: center;
     }
 
-    @supports not (height: 100dvh) {
-        body { min-height: 100vh; }
+    img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin-bottom: 20px;
     }
 
     h1 {
         font-size: 3em;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 1.2em;
-        margin-top: 0;
+        margin: 10px 0;
     }
 
     footer {
-        position: fixed;
-        bottom: 20px;
-        text-align: center;
-        width: 100%;
+        margin-top: 20px;
     }
 
     .contatos a {
@@ -66,12 +55,13 @@
 </style>
 </head>
 <body>
+    <img src="fundo1a.jpg" alt="Logo Toca da Aventura">
     <h1>Em Construção</h1>
     <p>Nos siga e fale conosco:</p>
     <footer>
         <div class="contatos">
-            <a href="https://instagram.com/tocadaaventura" target="_blank">📷 Instagram</a>
-            <a href="https://wa.me/556199070808" target="_blank">💬 WhatsApp</a>
+            <a href="https://instagram.com/seuusuario" target="_blank">📷 Instagram</a>
+            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank">💬 WhatsApp</a>
         </div>
     </footer>
 </body>
