@@ -12,6 +12,9 @@
       position: sticky; top:0; background:#fff; border-bottom:1px solid #eee;
       padding: 12px 16px; display:flex; gap:12px; align-items:center; z-index: 2;
     }
+    body { 
+  background: #fff7f0; /* pastel pêssego suave */
+   }
     header a.btn {
       appearance: none; border: none; padding: 10px 14px; border-radius:10px; cursor:pointer;
       background:#111; color:#fff; font-weight:600; text-decoration:none;
@@ -25,12 +28,38 @@
       gap:12px;
     }
     .card {
-      background:#fff; border-radius:12px; overflow:hidden; border:1px solid #eee;
-      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+
+  /* Borda em degradê “brilhante” + fundo branco no conteúdo */
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(120deg, #ffd6e7, #d7f7ff, #e1ffd8) border-box;
+  /* Glow suave ao redor */
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.06),
+    0 0 18px rgba(255, 200, 240, .35),
+    0 0 12px rgba(180, 220, 255, .25);
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+    .card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.10),
+    0 0 24px rgba(255, 200, 240, .55),
+    0 0 18px rgba(180, 220, 255, .45);
     }
     .thumb {
-      display:block; width:100%; height: 180px; object-fit:cover; background:#f0f0f0;
-      cursor: zoom-in;
+  border-radius: 10px;       /* arredonda levemente a própria imagem */
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  cursor: zoom-in;
     }
     /* Lightbox */
     .lightbox {
@@ -123,3 +152,4 @@
   </script>
 </body>
 </html>
+
